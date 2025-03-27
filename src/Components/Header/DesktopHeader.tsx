@@ -31,7 +31,7 @@ export default function DesktopHeader({menulist}:{menulist:MenuItem[]}) {
   };
 
   return (
-    <div className="hidden md:flex w-full header py-4 fixed top-0 left-0 z-50 bg-white">
+    <div className="hidden md:flex w-full header py-4 fixed top-0 left-0 z-50">
       <div className="cbox flex w-full items-center justify-between gap-x-4 px-4">
         <div className="flex items-center gap-x-4">
           <Link href={"./"}>
@@ -46,7 +46,7 @@ export default function DesktopHeader({menulist}:{menulist:MenuItem[]}) {
           <ul className="flex justify-start items-center gap-x-6">
             {menulist.map((item) => (
               <Link href={item.link} key={item.id}>
-                <li className="text-gray-700 hover:text-red-600 transition-colors">
+                <li className="text-white hover:text-red-600 transition-colors">
                   {item.text}
                 </li>
               </Link>
@@ -55,7 +55,7 @@ export default function DesktopHeader({menulist}:{menulist:MenuItem[]}) {
         </div>
         <div className="flex items-center gap-x-4" ref={desktopSearchRef}>
           <motion.button
-            className="text-gray-700 hover:text-red-600 z-10"
+            className="text-white hover:text-red-600 z-10"
             onClick={() => setIsDesktopSearchOpen(!isDesktopSearchOpen)}
           >
             <SearchOutlined />

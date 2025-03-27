@@ -4,7 +4,7 @@
 import { MenuItem } from "@/lib/types";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
-
+import './Header.css'
 
 
 export const menulist: MenuItem[] = [

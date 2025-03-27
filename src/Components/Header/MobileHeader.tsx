@@ -36,11 +36,11 @@ export default function MobileHeader({menulist}:{menulist:MenuItem[]}) {
   };
 
   return (
-    <div className="md:hidden w-full header pt-4 fixed top-0 left-0 z-50 bg-white">
+    <div className="md:hidden w-full header pt-4 fixed top-0 left-0 z-50 ">
       <div className="cbox flex justify-between items-center px-4">
         <div className="flex w-full items-center flex-row-reverse justify-between">
           <motion.button
-            className="flex items-center"
+            className="flex text-white items-center"
             onClick={() => {
               setIsSearchMenuOpen(!isSearchMenuOpen);
               setIsNavMenuOpen(false);
