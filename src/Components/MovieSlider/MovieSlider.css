@@ -54,15 +54,15 @@
 
 /* استایل پیش‌فرض نویگیشن */
 .swiper-button-next,
-.swiper-button-prev {
+ .swiper-button-prev {
   color: white;
   z-index: 10;
 }
 
 /* مخفی کردن نویگیشن در موبایل */
 @media (max-width: 766px) {
-  .swiper-button-next,
-  .swiper-button-prev {
+  .mySwiper  .swiper-button-next,
+  .mySwiper  .swiper-button-prev {
     display: none !important;
   }
 }
