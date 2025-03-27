@@ -10,8 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade"; // اضافه کردن استایل fade
 import "./MovieSlider.css";
 import {
-  Add,
-  AddAPhoto,
+
   CalendarMonth,
   LanguageOutlined,
   PlayArrow,
@@ -85,7 +84,7 @@ export default function MovieSlider() {
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "left center!important",
                 height: "100%",
               }}
             >
