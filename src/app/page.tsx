@@ -1,3 +1,6 @@
+import DownloadApp from "@/Components/DownloadApp/DownloadApp";
+import Footer from "@/Components/Footer/Footer";
+
 import Header from "@/Components/Header/Header";
 import MovieSeriesSlider from "@/Components/MovieSeriesSlider/MovieSeriesSlider";
 import MovieSlider from "@/Components/MovieSlider/MovieSlider";
@@ -167,5 +170,7 @@ export default function page() {
 <MovieSeriesSlider title="بهترین انیمیشن ها" topMovies={topMovies}/>
 <MovieSeriesSlider title=" جدیدترین سریال ها" topMovies={topSeries}/>
 <MovieSeriesSlider title=" بهترین سینمایی" topMovies={topMovies}/>
+<DownloadApp/>
+<Footer/>
   </>
 }
