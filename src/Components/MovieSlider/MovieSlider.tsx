@@ -101,8 +101,8 @@ export default function MovieSlider() {
                       </span>
                     ))}
                   </div>
-                  <h2 className="my-4 text-4xl">{slide.title}</h2>
-                  <p className="my-4 text-[12px] md:text-lg">{slide.description}</p>
+                  <h2 className="my-4 text-4xl yekanh">{slide.title}</h2>
+                  <p className="my-4 text-[12px] md:text-lg ">{slide.description}</p>
                   <div className="flex text-[10px] md:text-lg my-4 justify-start items-center gap-x-2">
                     <div className="flex items-center md:m-2 gap-2">
                       <CalendarMonth />

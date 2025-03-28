@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import './SelectGenre.css'
 import Link from "next/link";
+import { Subtitles } from "@mui/icons-material";
 const Genres = [
     { id: 1, en: "action", fa: "اکشن" },
     { id: 2, en: "adventure", fa: "ماجراجویی" },
@@ -28,10 +28,11 @@ const Genres = [
 export default function SelectGenre() {
   return (
     <div className="p-5 bg-black">
-      <h2 className="text-white text-2xl md:text-3xl mb-6 font-yekan">
-     
-        ژانرها
-      </h2>
+
+   <div className="flex mb-4 text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
+        <Subtitles/>
+          <h2>ژانرها</h2>
+        </div>
 
       <Swiper
         modules={[Navigation]}

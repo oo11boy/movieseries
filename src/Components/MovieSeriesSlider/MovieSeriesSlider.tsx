@@ -1,24 +1,31 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import Link from "next/link";
-import { AddCircleOutlineRounded } from "@mui/icons-material";
+import { AddCircleOutlineRounded, VisibilityOutlined } from "@mui/icons-material";
 
 // تعریف رابط Movie
 interface Movie {
-    title: string;
-    genre: string;
-    year: number;
-    description: string;
-    image: string;
-  }
-  
+  title: string;
+  genre: string;
+  year: number;
+  description: string;
+  image: string;
+}
 
-export default function MovieSeriesSlider({title,topMovies}:{title:string,topMovies:Movie[]}) {
+export default function MovieSeriesSlider({
+  title,
+  topMovies,
+  icon
+}: {
+  title: string;
+  topMovies: Movie[];
+  icon:ReactNode
+}) {
   const [imageLoaded, setImageLoaded] = useState<Record<number, boolean>>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeSlide, setActiveSlide] = useState<number | null>(null);
@@ -30,7 +37,7 @@ export default function MovieSeriesSlider({title,topMovies}:{title:string,topMov
       setImageLoaded((prev) => ({ ...prev, [index]: true }));
     };
     img.onerror = () => {
-      setImageLoaded((prev) => ({ ...prev, [index]: true })); // حتی اگه خطا بده، لودینگ متوقف بشه
+      setImageLoaded((prev) => ({ ...prev, [index]: true }));
     };
   };
 
@@ -42,7 +49,7 @@ export default function MovieSeriesSlider({title,topMovies}:{title:string,topMov
     });
 
     const timer = setTimeout(() => {
-      setIsLoading(false); // فال‌بک بعد از 5 ثانیه
+      setIsLoading(false);
     }, 5000);
 
     const allLoaded = topMovies.every((_, index) => imageLoaded[index]);
@@ -51,13 +58,37 @@ export default function MovieSeriesSlider({title,topMovies}:{title:string,topMov
     }
 
     return () => clearTimeout(timer);
-  }, [imageLoaded]);
+  }, [imageLoaded, topMovies]);
 
   return (
     <div className="p-5">
-      <h2 className="text-white text-2xl md:text-3xl mb-6 yekanh">
-       {title}
-      </h2>
+      {/* عنوان، خط تیره و دکمه بیشتر ببینید */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
+       {icon}
+        <h2>
+            
+            {title}
+            </h2>
+       
+        </div>
+
+        <div className="flex-1 mx-4 h-[3px] relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-70 rounded-full animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-300 to-transparent opacity-30 scale-95 rounded-full"></div>
+        </div>
+        <Link
+          href="#"
+          className="group flex items-center gap-2 text-teal-400 text-sm md:text-lg font-medium bg-teal-900/20 px-4 py-1.5 rounded-full hover:bg-teal-800 hover:text-teal-200 transition-all duration-300 shadow-md"
+        >
+            <VisibilityOutlined  className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300"
+           />
+          بیشتر ببینید
+         
+        </Link>
+      </div>
+
+      {/* اسلایدر */}
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
@@ -79,7 +110,7 @@ export default function MovieSeriesSlider({title,topMovies}:{title:string,topMov
               href="#"
               className="relative flex flex-col items-center group"
               onClick={(e) => {
-                e.preventDefault(); // جلوگیری از رفتن به لینک در موبایل
+                e.preventDefault();
                 setActiveSlide(activeSlide === index ? null : index);
               }}
             >
@@ -115,10 +146,10 @@ export default function MovieSeriesSlider({title,topMovies}:{title:string,topMov
                     <li>•</li>
                     <li>{movie.year}</li>
                   </ul>
-                  <p className="text-sm hidden md:flex  text-gray-400 my-2">{movie.description}</p>
+                  <p className="text-sm hidden md:flex text-gray-400 my-2">{movie.description}</p>
                   <div className="flex items-center gap-3 mt-3">
-                    <button className=" bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-200">
-                    <AddCircleOutlineRounded fontSize="large" className="text-white"/>
+                    <button className="bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-200">
+                      <AddCircleOutlineRounded fontSize="large" className="text-white" />
                     </button>
                     <button className="flex-1 bg-red-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200">
                       پخش کن
