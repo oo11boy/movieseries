@@ -1,8 +1,5 @@
-.header{
-    background: rgba(0, 0, 0, .3);
-    
-    backdrop-filter: blur(.625em);
-
-}
-
-
+.header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.625em);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* اضافه کردن خط پایین ظریف */
+  }

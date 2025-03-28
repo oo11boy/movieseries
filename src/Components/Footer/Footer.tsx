@@ -3,9 +3,9 @@ import { Facebook, Twitter, Instagram, LinkedIn, Email, Phone } from '@mui/icons
 
 export default function Footer() {
   return (
-    <footer className=" text-gray-200">
+    <footer className=" md:block  hidden text-gray-200">
       <div className="footer-top">
-        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto cbox py-16 ">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
             {/* بخش لوگو و اطلاعات تماس */}
             <div className="lg:col-span-1">
