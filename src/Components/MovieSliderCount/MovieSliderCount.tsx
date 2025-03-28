@@ -126,25 +126,26 @@ export default function MovieSliderCount({
         spaceBetween={10}
         slidesPerView={2}
         navigation
+        slidesPerGroup={2} 
         initialSlide={10}
         breakpoints={{
-          640: { slidesPerView: 2, spaceBetween: 15 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 10 },
-          1200: { slidesPerView: 5, spaceBetween: 10 },
-          1324: { slidesPerView: 6, spaceBetween: 10 },
-        }}
+            640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 10 },
+            768: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 10 },
+            1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 10 },
+            1200: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 10 },
+            1324: { slidesPerView: 6, slidesPerGroup: 6, spaceBetween: 10 },
+            }}
       >
         {topMovies.map((movie: Movie, index: number) => (
           <SwiperSlide key={index}>
             <Link href="#" className="slide-content relative">
               {/* نمایش اسکلتون در حالت لودینگ یا وقتی تصویر هنوز لود نشده */}
               {(!imageLoaded[index] || isLoading) && (
-                <div className="skeleton rounded-xl w-full h-[200px] sm:h-[400px] md:h-[350px] lg:h-[400px]"></div>
+                <div className="skeleton rounded-xl w-full h-[290px]  sm:h-[450px] md:h-[400px] lg:h-[400px]"></div>
               )}
               {/* نمایش تصویر وقتی لود شده باشد */}
               <img
-                className={`rounded-xl mix-blend-overlay w-full h-[200px] sm:h-[400px] md:h-[350px] lg:h-[400px] object-cover ${
+                className={`rounded-xl mix-blend-overlay w-full h-[290px]  sm:h-[450px] md:h-[400px] lg:h-[400px] object-cover ${
                   imageLoaded[index] && !isLoading ? "block" : "hidden"
                 }`}
                 src={movie.image}

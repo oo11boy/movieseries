@@ -61,8 +61,8 @@
 
 /* مخفی کردن نویگیشن در موبایل */
 @media (max-width: 766px) {
-  .mySwiper  .swiper-button-next,
-  .mySwiper  .swiper-button-prev {
+ .swiper-button-next,
+  .swiper-button-prev {
     display: none !important;
   }
 }

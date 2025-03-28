@@ -20,7 +20,7 @@ export default function DownloadApp() {
               className="flex items-center bg-gray-800 border border-gray-700 hover:bg-gray-700 rounded-xl px-4 py-3 w-full sm:w-56 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
+                src="https://freelogopng.com/images/all_img/1664285914google-play-logo-png.png"
                 alt="Google Play"
                 className="w-8 sm:w-9"
               />
@@ -34,7 +34,7 @@ export default function DownloadApp() {
               className="flex items-center bg-gray-800 border border-gray-700 hover:bg-gray-700 rounded-xl px-4 py-3 w-full sm:w-56 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/888/888841.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/1724px-Apple_logo_white.svg.png"
                 alt="Apple Store"
                 className="w-8 sm:w-9"
               />

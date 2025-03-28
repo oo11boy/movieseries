@@ -6,7 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import Link from "next/link";
-import { AddCircleOutlineRounded, VisibilityOutlined } from "@mui/icons-material";
+import AddIcon from "@mui/icons-material/Add";
+import {  VisibilityOutlined } from "@mui/icons-material";
 
 // تعریف رابط Movie
 interface Movie {
@@ -20,11 +21,11 @@ interface Movie {
 export default function MovieSeriesSlider({
   title,
   topMovies,
-  icon
+  icon,
 }: {
   title: string;
   topMovies: Movie[];
-  icon:ReactNode
+  icon: ReactNode;
 }) {
   const [imageLoaded, setImageLoaded] = useState<Record<number, boolean>>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -64,13 +65,9 @@ export default function MovieSeriesSlider({
     <div className="p-5">
       {/* عنوان، خط تیره و دکمه بیشتر ببینید */}
       <div className="flex items-center justify-between mb-6">
-        <div className="flex text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
-       {icon}
-        <h2>
-            
-            {title}
-            </h2>
-       
+        <div className="flex text-white font-bold yekanh items-center space-x-2 text-md md:text-3xl">
+          {icon}
+          <h2>{title}</h2>
         </div>
 
         <div className="flex-1 mx-4 h-[3px] relative">
@@ -81,10 +78,8 @@ export default function MovieSeriesSlider({
           href="#"
           className="group flex items-center gap-2 text-teal-400 text-sm md:text-lg font-medium bg-teal-900/20 px-4 py-1.5 rounded-full hover:bg-teal-800 hover:text-teal-200 transition-all duration-300 shadow-md"
         >
-            <VisibilityOutlined  className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300"
-           />
+          <VisibilityOutlined className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300" />
           بیشتر ببینید
-         
         </Link>
       </div>
 
@@ -93,15 +88,16 @@ export default function MovieSeriesSlider({
         modules={[Navigation]}
         spaceBetween={10}
         slidesPerView={2}
+        slidesPerGroup={2} // جابجایی به اندازه تعداد اسلایدهای قابل مشاهده
         navigation
         initialSlide={0}
         className="overflow-visible"
         breakpoints={{
-          640: { slidesPerView: 2, spaceBetween: 15 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 10 },
-          1200: { slidesPerView: 5, spaceBetween: 10 },
-          1324: { slidesPerView: 6, spaceBetween: 10 },
+          640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 10 },
+          768: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 10 },
+          1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 10 },
+          1200: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 10 },
+          1324: { slidesPerView: 6, slidesPerGroup: 6, spaceBetween: 10 },
         }}
       >
         {topMovies.map((movie: Movie, index: number) => (
@@ -116,18 +112,18 @@ export default function MovieSeriesSlider({
             >
               {/* اسکلتون در حالت لودینگ */}
               {(!imageLoaded[index] || isLoading) && (
-                <div className="bg-gray-800 rounded-xl w-full h-[200px] sm:h-[400px] md:h-[350px] lg:h-[400px] relative overflow-hidden animate-pulse">
+                <div className="bg-gray-800 rounded-xl w-full h-[290px] sm:h-[450px] md:h-[400px] lg:h-[400px] relative overflow-hidden animate-pulse">
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 animate-shimmer"></div>
                 </div>
               )}
               {/* تصویر و اطلاعات فیلم */}
               <div
-                className={`relative transition-transform duration-500 ease-in-out ${
+                className={`relative w-full transition-transform duration-500 ease-in-out ${
                   imageLoaded[index] && !isLoading ? "block" : "hidden"
                 }`}
               >
                 <img
-                  className="rounded-xl w-full h-[200px] sm:h-[400px] md:h-[350px] lg:h-[400px] object-cover transition-opacity duration-300"
+                  className="rounded-xl w-full h-[290px] sm:h-[450px] md:h-[400px] lg:h-[400px] object-cover transition-opacity duration-300"
                   src={movie.image}
                   alt={movie.title}
                 />
@@ -145,13 +141,13 @@ export default function MovieSeriesSlider({
                     <li>{movie.genre}</li>
                     <li>•</li>
                     <li>{movie.year}</li>
-                  </ul>
+                 -  </ul>
                   <p className="text-sm hidden md:flex text-gray-400 my-2">{movie.description}</p>
                   <div className="flex items-center gap-3 mt-3">
-                    <button className="bg-gray-700 text-white rounded-full hover:bg-gray-600 transition-colors duration-200">
-                      <AddCircleOutlineRounded fontSize="large" className="text-white" />
+                  <button className="bg-[#444] p-1 sm:p-2 text-white rounded-lg">
+                      <AddIcon />
                     </button>
-                    <button className="flex-1 bg-red-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200">
+                    <button className="flex-1  bg-red-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200">
                       پخش کن
                     </button>
                   </div>
