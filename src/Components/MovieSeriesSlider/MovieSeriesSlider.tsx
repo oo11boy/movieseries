@@ -5,18 +5,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
-import Link from "next/link";
+import { useRouter } from "next/navigation"; // برای App Router
 import AddIcon from "@mui/icons-material/Add";
-import {  VisibilityOutlined } from "@mui/icons-material";
-
-// تعریف رابط Movie
-interface Movie {
-  title: string;
-  genre: string;
-  year: number;
-  description: string;
-  image: string;
-}
+import { VisibilityOutlined } from "@mui/icons-material";
+import { Movie } from "@/lib/types";
 
 export default function MovieSeriesSlider({
   title,
@@ -30,6 +22,7 @@ export default function MovieSeriesSlider({
   const [imageLoaded, setImageLoaded] = useState<Record<number, boolean>>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeSlide, setActiveSlide] = useState<number | null>(null);
+  const router = useRouter();
 
   const checkImageLoaded = (src: string, index: number): void => {
     const img = new Image();
@@ -61,8 +54,17 @@ export default function MovieSeriesSlider({
     return () => clearTimeout(timer);
   }, [imageLoaded, topMovies]);
 
+  const handlePlayClick = (movieTitle: string) => {
+    router.push(`../movie/${movieTitle}`);
+  };
+
+  // فانکشن برای نمایش/مخفی کردن اطلاعات با کلیک روی تصویر
+  const handleImageClick = (index: number) => {
+    setActiveSlide(activeSlide === index ? null : index);
+  };
+
   return (
-    <div className="p-5">
+    <div className="py-5 cbox">
       {/* عنوان، خط تیره و دکمه بیشتر ببینید */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex text-white font-bold yekanh items-center space-x-2 text-md md:text-3xl">
@@ -74,13 +76,13 @@ export default function MovieSeriesSlider({
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-70 rounded-full animate-pulse-slow"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-teal-300 to-transparent opacity-30 scale-95 rounded-full"></div>
         </div>
-        <Link
-          href="#"
+        <button
+          onClick={() => router.push("#")}
           className="group flex items-center gap-2 text-teal-400 text-sm md:text-lg font-medium bg-teal-900/20 px-4 py-1.5 rounded-full hover:bg-teal-800 hover:text-teal-200 transition-all duration-300 shadow-md"
         >
           <VisibilityOutlined className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300" />
           بیشتر ببینید
-        </Link>
+        </button>
       </div>
 
       {/* اسلایدر */}
@@ -88,7 +90,7 @@ export default function MovieSeriesSlider({
         modules={[Navigation]}
         spaceBetween={10}
         slidesPerView={2}
-        slidesPerGroup={2} // جابجایی به اندازه تعداد اسلایدهای قابل مشاهده
+        slidesPerGroup={2}
         navigation
         initialSlide={0}
         className="overflow-visible"
@@ -102,14 +104,7 @@ export default function MovieSeriesSlider({
       >
         {topMovies.map((movie: Movie, index: number) => (
           <SwiperSlide key={index} className="overflow-visible">
-            <Link
-              href="#"
-              className="relative flex flex-col items-center group"
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveSlide(activeSlide === index ? null : index);
-              }}
-            >
+            <div className="relative flex flex-col items-center group">
               {/* اسکلتون در حالت لودینگ */}
               {(!imageLoaded[index] || isLoading) && (
                 <div className="bg-gray-800 rounded-xl w-full h-[290px] sm:h-[450px] md:h-[400px] lg:h-[400px] relative overflow-hidden animate-pulse">
@@ -121,6 +116,7 @@ export default function MovieSeriesSlider({
                 className={`relative w-full transition-transform duration-500 ease-in-out ${
                   imageLoaded[index] && !isLoading ? "block" : "hidden"
                 }`}
+                onClick={() => handleImageClick(index)} // اضافه کردن کلیک روی کل کارت
               >
                 <img
                   className="rounded-xl w-full h-[290px] sm:h-[450px] md:h-[400px] lg:h-[400px] object-cover transition-opacity duration-300"
@@ -141,19 +137,25 @@ export default function MovieSeriesSlider({
                     <li>{movie.genre}</li>
                     <li>•</li>
                     <li>{movie.year}</li>
-                 -  </ul>
+                  </ul>
                   <p className="text-sm hidden md:flex text-gray-400 my-2">{movie.description}</p>
                   <div className="flex items-center gap-3 mt-3">
-                  <button className="bg-[#444] p-1 sm:p-2 text-white rounded-lg">
+                    <button className="bg-[#444] p-1 sm:p-2 text-white rounded-lg">
                       <AddIcon />
                     </button>
-                    <button className="flex-1  bg-red-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation(); // جلوگیری از فعال شدن handleImageClick
+                        handlePlayClick(movie.title);
+                      }}
+                      className="flex-1 bg-red-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200"
+                    >
                       پخش کن
                     </button>
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

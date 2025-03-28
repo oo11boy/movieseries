@@ -3,6 +3,7 @@ import { Facebook, Twitter, Instagram, LinkedIn, Email, Phone } from '@mui/icons
 
 export default function Footer() {
   return (
+    <>
     <footer className=" md:block  hidden text-gray-200">
       <div className="footer-top">
         <div className="mx-auto cbox py-16 ">
@@ -200,5 +201,7 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    <div className="w-full h-[70px]  "></div>
+    </>
   );
 }

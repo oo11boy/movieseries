@@ -23,6 +23,7 @@ export default function Header() {
     <div className="md:hidden">
     <BottomMenu/>
       </div> 
+<div className="w-full h-[70px]  "></div>
     </>
   );
 }

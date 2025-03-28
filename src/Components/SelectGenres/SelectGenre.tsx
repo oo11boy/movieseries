@@ -27,7 +27,7 @@ const Genres = [
 
 export default function SelectGenre() {
   return (
-    <div className="p-5 bg-black">
+    <div className="py-5 cbox bg-black">
 
    <div className="flex mb-4 text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
         <Subtitles/>

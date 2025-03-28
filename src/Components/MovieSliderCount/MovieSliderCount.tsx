@@ -101,7 +101,7 @@ export default function MovieSliderCount({
   }, [imageLoaded]);
 
   return (
-    <div className="movie-slider">
+    <div className="py-5 cbox">
       <div className="flex items-center justify-between mb-6">
         <div className="flex text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
           {icon}

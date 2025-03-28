@@ -1,0 +1,222 @@
+
+    export const topMovies = [
+      {
+        title: "نوپا",
+        genre: "درام",
+        year: 2023,
+        description: "داستانی دل‌انگیز از رشد و کشف.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/toddler-portrait.webp",
+      },
+      {
+        title: "یخ‌زده",
+        genre: "انیمیشن",
+        year: 2013,
+        description: "داستانی جادویی از خواهری و ماجراجویی.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/frzzen.webp",
+      },
+      {
+        title: "جنگ قهرمانان",
+        genre: "اکشن",
+        year: 2025,
+        description: "نبردی حماسی برای شکوه و افتخار.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2025/02/gameofhero-portrait.webp",
+      },
+      {
+        title: "تایتانیک",
+        genre: "عاشقانه",
+        year: 1997,
+        description: "داستانی عاشقانه و تراژیک در کشتی‌ای محکوم به نابودی.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/tianic.webp",
+      },
+      {
+        title: "کریشنای کوچک",
+        genre: "انیمیشن",
+        year: 2020,
+        description: "ماجراهای خدایی جوان در جهانی اساطیری.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/krishna-portrait-.webp",
+      },
+      {
+        title: "سگ قرمز",
+        genre: "خانوادگی",
+        year: 2011,
+        description: "سفر سگی وفادار برای یافتن صاحبش.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/reed-dog.webp",
+      },
+      {
+        title: "ماجراجویی",
+        genre: "ماجراجویی",
+        year: 2022,
+        description: "جستجویی هیجان‌انگیز در سرزمین‌های ناشناخته.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/Adventure-1.webp",
+      },
+      {
+        title: "گروه",
+        genre: "کمدی",
+        year: 2024,
+        description: "ماجرایی خنده‌دار از قهرمانان غیرمنتظره.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/the-crew.webp",
+      },
+      {
+        title: "سینکرونیک",
+        genre: "علمی-تخیلی",
+        year: 2019,
+        description: "سفری ذهن‌گشا در زمان.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/synchronic-portrait.webp",
+      },
+      {
+        title: "گناهکار",
+        genre: "هیجان‌انگیز",
+        year: 2021,
+        description: "داستانی گیرا از عدالت و خیانت.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/guilty-portrait.webp",
+      },
+    ];
+    
+  export   const topSeries = [
+      {
+        title: "بیداری: اولین‌ها",
+        genre: "اکشن و ماجراجویی",
+        year: 2025, // حدس بر اساس تصویر و تاریخ آپلود (2025/02)
+        description: "ماجراجویی حماسی برای بیدار کردن اولین قهرمانان.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2025/02/the-first-of-us-portrait.webp",
+      },
+      {
+        title: "فراتر از مرزها",
+        genre: "اکشن و ترسناک",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "سفری پرهیجان و ترسناک به سوی ناشناخته‌ها.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/migration-portrait-.webp",
+      },
+      {
+        title: "تایتانیک: گمشده و پیدا شده",
+        genre: "اکشن و ماجراجویی",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "داستانی جدید از کشتی افسانه‌ای با اکشن و رمز و راز.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/tianic.webp",
+      },
+      {
+        title: "گروه واقعی",
+        genre: "اکشن و ماجراجویی",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "ماجرای تیمی شجاع در نبردی نفس‌گیر.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/the-crew-portrait.webp",
+      },
+      {
+        title: "دزدان دریایی روز اول",
+        genre: "ماجراجویی و انیمیشن",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "ماجراهای دزدان دریایی در دنیایی پر از شگفتی.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/pirates-ofdayones-orignal.webp",
+      },
+      {
+        title: "قلعه راک",
+        genre: "اکشن و ماجراجویی",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "داستانی پر از رمز و راز در قلعه‌ای مرموز.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/castle-rock-portrait.webp",
+      },
+      {
+        title: "وایکینگ‌ها",
+        genre: "ماجراجویی و انیمیشن",
+        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        description: "سفر جنگجویان شجاع در سرزمین‌های سرد و وحشی.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/vikings-portrait.webp",
+      },
+      {
+        title: "نوپا",
+        genre: "درام",
+        year: 2023,
+        description: "داستانی دل‌انگیز از رشد و کشف.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/toddler-portrait.webp",
+      },
+      {
+        title: "یخ‌زده",
+        genre: "انیمیشن",
+        year: 2013,
+        description: "داستانی جادویی از خواهری و ماجراجویی.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/frzzen.webp",
+      },
+      {
+        title: "گناهکار",
+        genre: "هیجان‌انگیز",
+        year: 2021,
+        description: "داستانی گیرا از عدالت و خیانت.",
+        image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/guilty-portrait.webp",
+      },
+    ];
+
+
+
+
+ export const Comments=[
+            {
+              id: 1,
+              username: "علیرضا",
+              text: "فیلم فوق‌العاده‌ای بود، پایانش واقعاً غافلگیرکننده بود!",
+              spoiler: false,
+              date: "1403/12/25",
+            },
+            {
+              id: 2,
+              username: "مریم",
+              text: "بازیگری‌ها عالی بود ولی داستان کمی کند پیش رفت.",
+              spoiler: false,
+              date: "1403/12/26",
+            },
+            {
+              id: 3,
+              username: "سامان",
+              text: "صحنه آخر فیلم خیلی شوکه‌کننده بود، نمی‌دونستم قراره اینجوری تموم شه!",
+              spoiler: true,
+              date: "1403/12/27",
+            },
+            {
+              id: 4,
+              username: "نازنین",
+              text: "موسیقی متنش بی‌نظیر بود، حسابی به حس فیلم اضافه کرد.",
+              spoiler: false,
+              date: "1403/12/28",
+            },
+            {
+              id: 5,
+              username: "بهرام",
+              text: "انتظار بیشتری از کارگردان داشتم، فیلم قبلیش بهتر بود.",
+              spoiler: false,
+              date: "1403/12/29",
+            },
+            {
+              id: 6,
+              username: "شیدا",
+              text: "اون پیچش داستانی وسط فیلم همه‌چیز رو عوض کرد، خیلی هوشمندانه بود.",
+              spoiler: true,
+              date: "1403/12/30",
+            },
+            {
+              id: 7,
+              username: "کیانوش",
+              text: "جلوه‌های ویژه حرف نداشت، انگار خودم تو فیلم بودم!",
+              spoiler: false,
+              date: "1404/01/01",
+            },
+            {
+              id: 8,
+              username: "پریسا",
+              text: "داستانش یه جاهایی گنگ بود، ولی بازیگر نقش اول عالی کار کرد.",
+              spoiler: false,
+              date: "1404/01/02",
+            },
+            {
+              id: 9,
+              username: "مهدی",
+              text: "فکر نمی‌کردم شخصیت اصلی آخرش بمیره، خیلی غم‌انگیز شد.",
+              spoiler: true,
+              date: "1404/01/03",
+            },
+            {
+              id: 10,
+              username: "سارا",
+              text: "یکی از بهترین فیلم‌هایی که今年دیدم، حتماً پیشنهادش می‌کنم!",
+              spoiler: false,
+              date: "1404/01/04",
+            },
+          ]

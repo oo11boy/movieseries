@@ -18,9 +18,7 @@
   }
 
 
-  .movie-slider {
-    padding: 20px;
-  }
+
   .slide-content {
     display: flex;
     flex-direction: column;

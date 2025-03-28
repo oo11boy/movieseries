@@ -2,7 +2,7 @@ import {  Discount, CheckCircle, StorefrontOutlined } from '@mui/icons-material'
 
 export default function Subscription() {
   return (
-    <div className="pt-[8%] bg-gradient-to-b from-black via-gray-900 to-teal-950 min-h-screen text-white flex items-center justify-center">
+    <div className=" bg-gradient-to-b from-black via-gray-900 to-teal-950 min-h-screen text-white flex items-center justify-center">
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 max-w-4xl">
       {/* عنوان با انیمیشن ظریف */}
       <div className="flex items-center justify-center mb-8 space-x-3 text-xl sm:text-2xl md:text-3xl font-bold animate-fade-in">
