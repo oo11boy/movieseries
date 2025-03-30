@@ -10,7 +10,7 @@ export default function DesktopHeader({ menulist }: { menulist: MenuItem[] }) {
     <div className="hidden md:flex w-full header py-4 fixed top-0 left-0 z-50">
       <div className="cbox flex w-full items-center justify-between gap-x-4">
         <div className="flex items-center gap-x-4">
-          <Link href={"./"}>
+          <Link href={"../"}>
             <Image
               src={"/image/dark_logo.png"}
               width={300}
@@ -50,7 +50,7 @@ export default function DesktopHeader({ menulist }: { menulist: MenuItem[] }) {
           </Link>
           {/* دکمه حساب کاربری */}
           <Link
-            href="../login"
+            href="../"
             className="group flex items-center gap-x-2 py-2 px-3 text-white border border-teal-500 rounded-lg bg-transparent shadow-md hover:bg-teal-600 hover:border-teal-600 hover:shadow-lg transition-all duration-300"
           >
             <AccountCircleOutlined className="group-hover:scale-110 transition-transform duration-300" />

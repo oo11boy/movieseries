@@ -35,7 +35,7 @@ export default function BottomMenu() {
 
       {/* آیتم اشتراک */}
       <Link
-        href={"./subscription"}
+        href={"../subscription"}
         className="flex flex-col items-center justify-center group hover:text-teal-300 transition-colors duration-300"
       >
         <StorefrontOutlined

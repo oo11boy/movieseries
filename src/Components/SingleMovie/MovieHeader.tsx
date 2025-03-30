@@ -8,7 +8,6 @@ import {
   ThumbUp,
   ThumbDown,
   Comment,
-  Close,
 } from "@mui/icons-material";
 import { DownloadOption, MovieInfo } from "@/lib/types";
 import { Modal, Box, IconButton } from "@mui/material";

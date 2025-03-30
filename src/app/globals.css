@@ -69,3 +69,7 @@ margin: auto;
   width: 95%;
   margin: auto;
 }
+
+body{
+  direction: rtl;
+}
