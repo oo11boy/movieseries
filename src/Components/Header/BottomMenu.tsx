@@ -23,7 +23,7 @@ export default function BottomMenu() {
         <p className="text-xs sm:text-sm mt-1 font-light">خانه</p>
       </Link>
       <Link
-        href={"../"}
+        href={"../search"}
         className="flex flex-col items-center justify-center group hover:text-teal-300 transition-colors duration-300"
       >
         <SearchOutlined

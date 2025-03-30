@@ -1,0 +1,51 @@
+.fixsearch {
+  position: fixed;
+  top: 5px;
+  left: 2.5%;
+  width: 95%;
+  animation: fixsearchanim 0.5s ease-in-out;
+}
+
+.relativesearch {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  animation: relativesearchanim 0.5s ease-in-out;
+}
+
+.placeholder {
+  height: 0; /* حالت اولیه وقتی فیکس نیست */
+}
+.searchadanim {
+  animation: searchadanim 1s;
+}
+@keyframes searchadanim {
+  0% {
+   opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+@keyframes fixsearchanim {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes relativesearchanim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
