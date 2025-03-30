@@ -101,7 +101,7 @@ export default function MovieSliderCount({
   }, [imageLoaded]);
 
   return (
-    <div className="py-5 cbox">
+    <div className="py-5 cbox" >
       <div className="flex items-center justify-between mb-6">
         <div className="flex text-white font-bold  yekanh items-center space-x-2 text-md md:text-3xl ">
           {icon}
@@ -127,7 +127,7 @@ export default function MovieSliderCount({
         slidesPerView={2}
         navigation
         slidesPerGroup={2} 
-        initialSlide={10}
+        initialSlide={0}
         breakpoints={{
             640: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 10 },
             768: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 10 },
@@ -135,6 +135,7 @@ export default function MovieSliderCount({
             1200: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 10 },
             1324: { slidesPerView: 6, slidesPerGroup: 6, spaceBetween: 10 },
             }}
+          
       >
         {topMovies.map((movie: Movie, index: number) => (
           <SwiperSlide key={index}>

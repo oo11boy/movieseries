@@ -84,13 +84,13 @@ export default function MovieSlider() {
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
-                backgroundPosition: "left center!important",
+                backgroundPosition: "center",
                 height: "100%",
               }}
             >
               <div className="overlay"></div>
               <div className="cbox">
-                <div className="slide-text ">
+                <div className="slide-text mt-[38%] sm:mt-[25%] md:mt-[30%] xl:mt-[10%]">
                   <div className="gap-x-2 flex">
                     {slide.tags.map((item) => (
                       <span
@@ -102,7 +102,7 @@ export default function MovieSlider() {
                     ))}
                   </div>
                   <h2 className="my-4 text-4xl yekanh">{slide.title}</h2>
-                  <p className="my-4 text-[12px] md:text-lg ">{slide.description}</p>
+                  <p className=" text-[12px] md:text-lg h-[9vh] flex justify-start items-center ">{slide.description}</p>
                   <div className="flex text-[10px] md:text-lg my-4 justify-start items-center gap-x-2">
                     <div className="flex items-center md:m-2 gap-2">
                       <CalendarMonth />

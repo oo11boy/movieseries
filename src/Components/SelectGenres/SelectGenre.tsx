@@ -36,8 +36,10 @@ export default function SelectGenre() {
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={10}
-        slidesPerView={3}
+      
+        spaceBetween={15} // فاصله بین اسلایدها رو کمی بیشتر می‌کنیم
+        slidesPerView={3.4} // اعشاری کردن برای نمایش بخشی از اسلاید بعدی
+      
         navigation={{
           nextEl: `.genreSwiper .swiper-button-next`,
           prevEl: `.genreSwiper .swiper-button-prev`,

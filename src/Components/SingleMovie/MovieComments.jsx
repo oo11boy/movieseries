@@ -140,11 +140,12 @@ export function MovieComments() {
       <div className="relative mb-10">
         <Swiper
           modules={[Navigation]}
+          dir="rtl"
           spaceBetween={24}
           slidesPerView={1}
           navigation={{
-            nextEl: ".swiper-button-next-custom-comment",
-            prevEl: ".swiper-button-prev-custom-comment",
+            nextEl: ".swiper-button-prev-custom-comment", // دکمه چپ برای بعدی
+            prevEl: ".swiper-button-next-custom-comment", // دکمه راست برای قبلی
           }}
           breakpoints={{
             768: {
