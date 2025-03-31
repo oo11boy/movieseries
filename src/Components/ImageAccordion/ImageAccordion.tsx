@@ -23,13 +23,13 @@ const ImageAccordion = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleClick = (index) => {
+  const handleClick = (index:number) => {
     if (isMobile) {
       setActiveIndex(index === activeIndex ? -1 : index); // در موبایل با کلیک باز و بسته می‌شه
     }
   };
 
-  const handlePlayClick = (seriesTitle) => {
+  const handlePlayClick = (seriesTitle:string) => {
     router.push(`../series/${seriesTitle}`); // تغییر مسیر برای سریال‌ها
   };
 
