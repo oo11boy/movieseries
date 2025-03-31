@@ -31,11 +31,13 @@ export default function DesktopHeader({ menulist }: { menulist: MenuItem[] }) {
         </div>
         <div className="flex items-center gap-x-4">
           {/* دکمه علاقه‌مندی */}
+          <Link href="../favorites">
           <button className="text-white hover:text-red-600 transition-colors">
             <Favorite />
           </button>
+          </Link>
           {/* دکمه سرچ */}
-          <Link href="/search">
+          <Link href="../search">
             <button className="text-white hover:text-red-600 transition-colors">
               <SearchOutlined />
             </button>
@@ -50,7 +52,7 @@ export default function DesktopHeader({ menulist }: { menulist: MenuItem[] }) {
           </Link>
           {/* دکمه حساب کاربری */}
           <Link
-            href="../"
+            href="../login"
             className="group flex items-center gap-x-2 py-2 px-3 text-white border border-teal-500 rounded-lg bg-transparent shadow-md hover:bg-teal-600 hover:border-teal-600 hover:shadow-lg transition-all duration-300"
           >
             <AccountCircleOutlined className="group-hover:scale-110 transition-transform duration-300" />

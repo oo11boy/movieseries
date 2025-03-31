@@ -80,8 +80,7 @@ const LoginRegister: React.FC = () => {
     }, 1000);
   };
 
-  const initialInputType = isEmail(inputValue) ? "ایمیل" : isPhone(inputValue) ? "شماره موبایل" : "";
-
+ 
   useEffect(() => {
     setTimeout(() => {
       setMessage({ text: "", type: "" });

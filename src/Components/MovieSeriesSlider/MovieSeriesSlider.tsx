@@ -156,7 +156,7 @@ export default function MovieSeriesSlider({
                         e.stopPropagation();
                         handlePlayClick(movie.title);
                       }}
-                      className="flex-1 bg-gradient-to-r from-red-600 to-teal-600 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200"
+                      className="flex-1 bg-gradient-to-r from-red-600 to-teal-800 text-[10px] md:text-lg text-white py-2 rounded hover:bg-red-700 transition-colors duration-200"
                     >
                       پخش کن
                     </button>

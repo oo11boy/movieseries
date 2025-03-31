@@ -59,7 +59,7 @@ export default function BottomMenu() {
 
       {/* آیتم علاقه‌مندی */}
       <Link
-        href={"../"}
+        href={"../favorites"}
         className="flex flex-col items-center justify-center group hover:text-teal-300 transition-colors duration-300"
       >
         <FavoriteBorderOutlined

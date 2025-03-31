@@ -1,6 +1,7 @@
 import DownloadApp from "@/Components/DownloadApp/DownloadApp";
 import Footer from "@/Components/Footer/Footer";
 import Header from "@/Components/Header/Header";
+import ImageAccordion from "@/Components/ImageAccordion/ImageAccordion";
 import MovieSeriesSlider from "@/Components/MovieSeriesSlider/MovieSeriesSlider";
 import MovieSlider from "@/Components/MovieSlider/MovieSlider";
 import MovieSliderCount from "@/Components/MovieSliderCount/MovieSliderCount";
@@ -19,12 +20,14 @@ export default function page() {
       <Header />
       <MovieSlider />
       <SelectGenre />
+      <ImageAccordion/>
       <MovieSliderCount icon={<EmojiEvents />} title="بهترین های تاریخ" />
       <MovieSeriesSlider
         icon={<Animation />}
         title="انیمیشن ها"
         topMovies={topMovies}
       />
+  
       <MovieSeriesSlider
         icon={<LiveTv />}
         title=" سریال ها"

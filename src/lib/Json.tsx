@@ -72,55 +72,62 @@
       },
     ];
     
-  export   const topSeries = [
+    export const topSeries = [
       {
         title: "بیداری: اولین‌ها",
         genre: "اکشن و ماجراجویی",
-        year: 2025, // حدس بر اساس تصویر و تاریخ آپلود (2025/02)
+        year: 2025,
         description: "ماجراجویی حماسی برای بیدار کردن اولین قهرمانان.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2025/02/the-first-of-us-portrait.webp",
+        latestUpdate: "قسمت 10 فصل 2 اضافه شد",
       },
       {
         title: "فراتر از مرزها",
         genre: "اکشن و ترسناک",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "سفری پرهیجان و ترسناک به سوی ناشناخته‌ها.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/migration-portrait-.webp",
+        latestUpdate: "قسمت 7 فصل 1 اضافه شد",
       },
       {
         title: "تایتانیک: گمشده و پیدا شده",
         genre: "اکشن و ماجراجویی",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "داستانی جدید از کشتی افسانه‌ای با اکشن و رمز و راز.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/tianic.webp",
+        latestUpdate: "قسمت 3 فصل 4 اضافه شد",
       },
       {
         title: "گروه واقعی",
         genre: "اکشن و ماجراجویی",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "ماجرای تیمی شجاع در نبردی نفس‌گیر.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/the-crew-portrait.webp",
+        latestUpdate: "قسمت 12 فصل 1 اضافه شد",
       },
       {
         title: "دزدان دریایی روز اول",
         genre: "ماجراجویی و انیمیشن",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "ماجراهای دزدان دریایی در دنیایی پر از شگفتی.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/pirates-ofdayones-orignal.webp",
+        latestUpdate: "قسمت 9 فصل 2 اضافه شد",
       },
       {
         title: "قلعه راک",
         genre: "اکشن و ماجراجویی",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "داستانی پر از رمز و راز در قلعه‌ای مرموز.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/castle-rock-portrait.webp",
+        latestUpdate: "قسمت 6 فصل 3 اضافه شد",
       },
       {
         title: "وایکینگ‌ها",
         genre: "ماجراجویی و انیمیشن",
-        year: 2024, // حدس بر اساس تاریخ آپلود (2024/11)
+        year: 2024,
         description: "سفر جنگجویان شجاع در سرزمین‌های سرد و وحشی.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/vikings-portrait.webp",
+        latestUpdate: "قسمت 4 فصل 2 اضافه شد",
       },
       {
         title: "نوپا",
@@ -128,6 +135,7 @@
         year: 2023,
         description: "داستانی دل‌انگیز از رشد و کشف.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/toddler-portrait.webp",
+        latestUpdate: "قسمت 8 فصل 1 اضافه شد",
       },
       {
         title: "یخ‌زده",
@@ -135,6 +143,7 @@
         year: 2013,
         description: "داستانی جادویی از خواهری و ماجراجویی.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/frzzen.webp",
+        latestUpdate: "قسمت 15 فصل 3 اضافه شد",
       },
       {
         title: "گناهکار",
@@ -142,6 +151,7 @@
         year: 2021,
         description: "داستانی گیرا از عدالت و خیانت.",
         image: "https://wordpress.iqonic.design/product/wp/streamit/wp-content/uploads/2024/11/guilty-portrait.webp",
+        latestUpdate: "قسمت 11 فصل 2 اضافه شد",
       },
     ];
 
