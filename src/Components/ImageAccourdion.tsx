@@ -37,7 +37,7 @@ const ImageAccordion = () => {
     },
   ];
 
-  const handleClick = (index) => {
+  const handleClick = (index:number) => {
     if (isMobile) {
       setActiveIndex(index === activeIndex ? 0 : index); // در موبایل با کلیک باز و بسته می‌شه
     }
