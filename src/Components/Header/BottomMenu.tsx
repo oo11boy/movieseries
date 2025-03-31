@@ -47,7 +47,7 @@ export default function BottomMenu() {
 
       {/* آیتم مدیریت اکانت */}
       <Link
-        href={"../"}
+        href={"../login"}
         className="flex flex-col items-center justify-center group hover:text-teal-300 transition-colors duration-300"
       >
         <AccountCircleOutlined

@@ -1,5 +1,5 @@
 "use client"
-import React, {  act, useEffect, useState } from "react";
+import React, {   useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import AddIcon from "@mui/icons-material/Add";
 import { Movie } from "@/lib/types";
@@ -57,7 +57,7 @@ export default function ListSearch() {
       {/* لیست کارت‌ها با CSS Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
         {topMovies.map((movie: Movie, index: number) => (
-           <div className="relative flex flex-col items-center group">
+           <div  key={index} className="relative flex flex-col items-center group">
            {/* بقیه کدها بدون تغییر */}
            {(!imageLoaded[index] || isLoading) && (
              <div className="bg-gray-800 rounded-xl w-full h-[290px] sm:h-[450px] md:h-[400px] lg:h-[400px] relative overflow-hidden animate-pulse">

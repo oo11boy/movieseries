@@ -1,0 +1,40 @@
+.animate-zoom-in {
+    animation: zoomIn 0.5s ease-out;
+  }
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out;
+  }
+  .animate-float {
+    animation: float infinite linear;
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
