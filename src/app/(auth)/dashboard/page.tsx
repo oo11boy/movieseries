@@ -1,12 +1,14 @@
-import UserDashboard from '@/AuthComponents/UserDashboard/UserDashboard'
-import Header from '@/Components/Header/Header'
+import UserDashboardContainer from '@/AuthComponents/UserDashboard/UserDashboardContainer'
+import Footer from '@/Components/Footer/Footer'
+import HeaderContainer from '@/Components/Header/HeaderContainer'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-        <Header/>
-        <UserDashboard/>
+        <HeaderContainer/>
+        <UserDashboardContainer/>
+        <Footer/>
     </div>
   )
 }

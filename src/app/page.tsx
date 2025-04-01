@@ -1,11 +1,9 @@
 import DownloadApp from "@/Components/DownloadApp/DownloadApp";
 import Footer from "@/Components/Footer/Footer";
-import Header from "@/Components/Header/Header";
+import HeaderContainer from "@/Components/Header/HeaderContainer";
 import ImageAccordion from "@/Components/ImageAccordion/ImageAccordion";
-import MovieSeriesSlider from "@/Components/MovieSeriesSlider/MovieSeriesSlider";
-import MovieSlider from "@/Components/MovieSlider/MovieSlider";
-import MovieSliderCount from "@/Components/MovieSliderCount/MovieSliderCount";
-import SelectGenre from "@/Components/SelectGenres/SelectGenre";
+import MovieSeriesSliderContainer from "@/Components/Sliders/MovieSeriesSlider/MovieSeriesSliderContainer";
+import SelectGenre from "@/Components/SelectGenres/SelectGenreContainer";
 import { topMovies, topSeries } from "@/lib/Json";
 import {
   Animation,
@@ -13,27 +11,32 @@ import {
   LiveTv,
   MovieCreation,
 } from "@mui/icons-material";
+import FullWidthSliderContainer from "@/Components/Sliders/FullWidthSlider/FullWidthSliderContainer";
+import TopNumberSliderContainer from "@/Components/Sliders/TopNumberSlider/TopNumberSliderContainer";
 
 export default function page() {
   return (
     <>
-      <Header />
-      <MovieSlider />
+      <HeaderContainer />
+      <FullWidthSliderContainer />
       <SelectGenre />
-      <ImageAccordion/>
-      <MovieSliderCount icon={<EmojiEvents />} title="بهترین های تاریخ" />
-      <MovieSeriesSlider
+      <ImageAccordion />
+      <TopNumberSliderContainer
+        icon={<EmojiEvents />}
+        title="بهترین های تاریخ"
+      />
+      <MovieSeriesSliderContainer
         icon={<Animation />}
         title="انیمیشن ها"
         topMovies={topMovies}
       />
-  
-      <MovieSeriesSlider
+
+      <MovieSeriesSliderContainer
         icon={<LiveTv />}
         title=" سریال ها"
         topMovies={topSeries}
       />
-      <MovieSeriesSlider
+      <MovieSeriesSliderContainer
         icon={<MovieCreation />}
         title=" فیلم های سینمایی"
         topMovies={topMovies}

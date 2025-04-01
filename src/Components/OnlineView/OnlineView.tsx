@@ -174,11 +174,11 @@ export default function OnlineView() {
           }));
 
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-teal-950 min-h-screen text-white flex flex-col">
+    <div className="bg-gradient-to-b from-black via-gray-900 to-teal-950 h-auto text-white flex flex-col">
       <div className="relative w-full max-w-5xl mx-auto mt-8 px-4">
         <div
           className={`bg-gray-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 ${
-            isFullscreen ? "fixed inset-0 z-50" : "h-[50vh]"
+            isFullscreen ? "fixed inset-0 z-50" : "h-[40vh] lg:h-[60vh] 2xl:h-[40vh]"
           }`}
         >
           <ReactPlayer

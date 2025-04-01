@@ -7,7 +7,7 @@ import React from "react";
 
 export default function DesktopHeader({ menulist }: { menulist: MenuItem[] }) {
   return (
-    <div className="hidden md:flex w-full header py-4 fixed top-0 left-0 z-50">
+    <div className="hidden md:flex w-full max-w-[1700px] m-auto header py-4 fixed top-0  z-50">
       <div className="cbox flex w-full items-center justify-between gap-x-4">
         <div className="flex items-center gap-x-4">
           <Link href={"../"}>

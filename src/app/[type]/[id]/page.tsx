@@ -1,7 +1,7 @@
 import Footer from "@/Components/Footer/Footer";
-import Header from "@/Components/Header/Header";
-import MovieSeriesSlider from "@/Components/MovieSeriesSlider/MovieSeriesSlider";
-import SingleMovie from "@/Components/SingleMovie/SingleMovie";
+import HeaderContainer from "@/Components/Header/HeaderContainer";
+import SingleMovieContainer from "@/Components/SingleMovie/SingleMovieContainer";
+import MovieSeriesSliderContainer from "@/Components/Sliders/MovieSeriesSlider/MovieSeriesSliderContainer";
 import { topMovies } from "@/lib/Json";
 import { MovieCreation } from "@mui/icons-material";
 import React from "react";
@@ -102,9 +102,12 @@ export default function MoviePage() {
 
   return (
     <>
-      <Header />
-      <SingleMovie movieinfo={movieinfo} downloadOptions={downloadOptions} />
-      <MovieSeriesSlider
+      <HeaderContainer />
+      <SingleMovieContainer
+        movieinfo={movieinfo}
+        downloadOptions={downloadOptions}
+      />
+      <MovieSeriesSliderContainer
         icon={<MovieCreation />}
         title="شاید بپسندید"
         topMovies={topMovies}

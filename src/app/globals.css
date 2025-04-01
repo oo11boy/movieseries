@@ -72,6 +72,8 @@ margin: auto;
 
 body{
   direction: rtl;
+  max-width: 1700px;
+  margin: auto;
 }
 
 .header {

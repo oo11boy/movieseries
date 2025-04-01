@@ -1,4 +1,6 @@
-"use client";
+'use client';
+
+// این کامپوننت هدر اصلی فیلم را نمایش می‌دهد و شامل اطلاعات اولیه، دکمه‌های دانلود و پیش‌نمایش و مودال دانلود است.
 import React, { useState } from "react";
 import Link from "next/link";
 import {
@@ -27,7 +29,6 @@ export default function MovieHeader({
 
   return (
     <div className="relative flex flex-col-reverse lg:flex-row justify-between items-center">
-      {/* بخش اطلاعات فیلم (بدون تغییر) */}
       <div className="w-full lg:w-1/2 flex items-center justify-center">
         <div className="w-full mx-auto flex items-center gap-6">
           <img
@@ -67,7 +68,7 @@ export default function MovieHeader({
                 <PlayArrow />
                 دانلود
               </button>
-              <button className="border border-red-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-red-600 transition-colors">
+              <button className="border border-red-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-red-700 transition-colors">
                 <Preview />
                 پیش‌نمایش
               </button>
@@ -116,7 +117,6 @@ export default function MovieHeader({
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent md:bg-gradient-to-l md:from-black md:via-black/5 md:to-transparent"></div>
       </div>
 
-      {/* مودال با آیکون زیبا و اسکرول */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -193,7 +193,6 @@ export default function MovieHeader({
             }
           `}</style>
 
-          {/* دکمه بستن با آیکون زیبا */}
           <IconButton
             onClick={handleClose}
             sx={{
@@ -203,13 +202,12 @@ export default function MovieHeader({
               color: "white",
               bgcolor: "rgba(239, 68, 68, 0.9)",
               borderRadius: "50%",
-
               width: 40,
               height: 40,
               boxShadow: "0 5px 15px rgba(239, 68, 68, 0.5)",
               "&:hover": {
                 bgcolor: "#f87171",
-                transform: "rotate(90deg)", // چرخش آیکون هنگام هاور
+                transform: "rotate(90deg)",
               },
               transition: "all 0.3s ease",
               zIndex: 99,

@@ -1,3 +1,4 @@
+// این کامپوننت بخش دانلود و تماشای فیلم را نمایش می‌دهد و شامل آکاردئون‌هایی برای انتخاب کیفیت و قسمت‌ها است.
 import React from "react";
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Button } from "@mui/material";
 import { ExpandMore, Download, PlayCircleOutline } from "@mui/icons-material";
@@ -6,7 +7,6 @@ import { DownloadOption } from "@/lib/types";
 export function DownloadSection({ downloadOptions }: { downloadOptions: DownloadOption[] }) {
   return (
     <div className="w-full h-full flex flex-col" style={{ backgroundColor: "#000" }}>
-      {/* عنوان ثابت */}
       <Typography
         className="yekan font-bold text-white text-center"
         sx={{
@@ -23,7 +23,6 @@ export function DownloadSection({ downloadOptions }: { downloadOptions: Download
         دانلود و تماشا
       </Typography>
 
-      {/* محتوای قابل اسکرول */}
       <div
         className="flex-1 overflow-y-auto px-6 py-6"
         style={{
@@ -42,7 +41,7 @@ export function DownloadSection({ downloadOptions }: { downloadOptions: Download
           }
           ::-webkit-scrollbar-thumb {
             background: #fff;
-            border-radius: 5px;
+            border-radius: 5px,
             box-shadow: "inset 0 0 6px rgba(0,0,0,0.3)";
           }
           ::-webkit-scrollbar-thumb:hover {

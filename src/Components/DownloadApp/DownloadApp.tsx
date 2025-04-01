@@ -10,7 +10,7 @@ export default function DownloadApp() {
             اپلیکیشن فیلم و سریال را دانلود کنید
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-gray-300">
-           جدیدترین انیمیشن ها و فیلم های جهان در اختیار شماست.
+            جدیدترین انیمیشن ها و فیلم های جهان در اختیار شماست.
           </p>
 
           {/* دکمه‌های دانلود */}
@@ -26,7 +26,9 @@ export default function DownloadApp() {
               />
               <div className="text-right mr-3">
                 <p className="text-xs text-gray-400">دانلود از</p>
-                <p className="text-sm sm:text-base font-semibold">گوگل پلی استور</p>
+                <p className="text-sm sm:text-base font-semibold">
+                  گوگل پلی استور
+                </p>
               </div>
             </a>
             <a
@@ -45,8 +47,6 @@ export default function DownloadApp() {
             </a>
           </div>
         </div>
-
-     
       </div>
     </div>
   );

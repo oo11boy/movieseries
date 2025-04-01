@@ -1,16 +1,16 @@
-
-// MovieCrew.jsx
+// این کامپوننت اطلاعات کارگردان و بازیگران فیلم را نمایش می‌دهد.
 import React from "react";
 import { Group, MovieOutlined, Person } from "@mui/icons-material";
 import { MovieInfo } from "@/lib/types";
 
-export function MovieCrew({ movieinfo }:{movieinfo:MovieInfo}) {
+export function MovieCrew({ movieinfo }: { movieinfo: MovieInfo }) {
   return (
     <div className="mt-12">
       <div className="mb-8">
         <h3 className="text-lg font-semibold flex items-center gap-2 text-gray-200 mb-4">
-          <MovieOutlined/>
-          کارگردان</h3>
+          <MovieOutlined />
+          کارگردان
+        </h3>
         <div className="flex gap-4">
           {movieinfo.crew.director.map((director, index) => (
             <span
@@ -25,11 +25,9 @@ export function MovieCrew({ movieinfo }:{movieinfo:MovieInfo}) {
       </div>
       <div>
         <h3 className="text-lg font-semibold flex items-center gap-2 text-gray-200 mb-4">
-          <Group/>
-          بازیگران</h3>
-
-
-          
+          <Group />
+          بازیگران
+        </h3>
         <div className="flex flex-wrap gap-4">
           {movieinfo.cast.map((writer, index) => (
             <span

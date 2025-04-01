@@ -1,10 +1,11 @@
-"use client";
+'use client';
+
+// این کامپوننت بخش نظرات کاربران را نمایش می‌دهد و امکان ثبت نظر جدید را فراهم می‌کند.
 import React, { useState } from "react";
 import { Comment, Send, AddComment } from "@mui/icons-material";
 import { Avatar, Button, TextField, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import { Comments } from "@/lib/Json";
@@ -144,8 +145,8 @@ export function MovieComments() {
           spaceBetween={24}
           slidesPerView={1}
           navigation={{
-            nextEl: ".swiper-button-prev-custom-comment", // دکمه چپ برای بعدی
-            prevEl: ".swiper-button-next-custom-comment", // دکمه راست برای قبلی
+            nextEl: ".swiper-button-prev-custom-comment",
+            prevEl: ".swiper-button-next-custom-comment",
           }}
           breakpoints={{
             768: {
